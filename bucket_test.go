@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/y0ssar1an/q"
+	
 )
 
 type mockOutputter struct {
@@ -33,7 +33,7 @@ func TestAddBucket(t *testing.T) {
 			if mo.called {
 				t.Fatal("output shouldn't have happened")
 			}
-			q.Q(i, bck.entries)
+			
 			if len(bck.entries) != (i + 1) {
 				t.Fatal("entry count wrong")
 			}
